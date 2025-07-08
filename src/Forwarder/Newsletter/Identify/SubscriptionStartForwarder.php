@@ -1,8 +1,11 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Forwarder\Newsletter\Identify;
 
 use App\CDP\Analytics\Model\Subscription\Identify\IdentifyModel;
+use App\CDP\Analytics\Model\Subscription\Identify\SubscriptionStartMapper;
 use App\DTO\Newsletter\NewsletterWebhook;
 use App\Forwarder\Newsletter\ForwarderInterface;
 
@@ -20,9 +23,8 @@ class SubscriptionStartForwarder implements ForwarderInterface
         // Instantiate a class which models Identify data
         $identifyModel = new IdentifyModel();
 
-        dd($identifyModel);
-
         //  Populate the Identify model with the relevant data from the NewsletterWebhook
+        (new SubscriptionStartMapper())->map($newsletterWebhook, $identifyModel);
 
         //  Use the CDP client to POST the data to the CDP
 
