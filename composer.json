@@ -65,6 +65,7 @@
             "@auto-scripts"
         ],
         "run-tests": "composer run-phpunit && composer run-phpstan && composer run-phpcs && composer run-phplint",
+        "run-precommit": "composer run-phpstan && composer run-phpcs && composer run-phplint && composer run-phpcbf",
         "run-phpstan": "vendor/bin/phpstan analyse",
         "run-phpcs": "vendor/bin/phpcs",
         "run-phplint": "vendor/bin/phplint",
