@@ -8,7 +8,6 @@ use App\DTO\Webhook;
 
 class NewsletterHandler implements WebhookHandlerInterface
 {
-
     private const array SUPPORTED_EVENTS = [
         'newsletter_opened',
         'newsletter_subscribed',

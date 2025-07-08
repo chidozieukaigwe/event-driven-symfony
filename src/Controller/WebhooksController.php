@@ -18,8 +18,9 @@ use Symfony\Component\Serializer\SerializerInterface;
  */
 class WebhooksController extends AbstractController
 {
-
-    public function __construct(private SerializerInterface $serializer, private HandlerDelegator $handlerDelegator) {}
+    public function __construct(private SerializerInterface $serializer, private HandlerDelegator $handlerDelegator)
+    {
+    }
     /**
      * Method healthcheck
      *

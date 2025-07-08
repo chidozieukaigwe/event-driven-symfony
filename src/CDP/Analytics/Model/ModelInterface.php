@@ -7,7 +7,7 @@ namespace App\CDP\Analytics\Model;
 interface ModelInterface
 {
     /**
-     * @return array<mixed>
+     * @return array<string, mixed>
      */
     public function toArray(): array;
 }

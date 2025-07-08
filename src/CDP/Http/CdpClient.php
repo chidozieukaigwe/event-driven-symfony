@@ -15,7 +15,8 @@ class CdpClient
     public function __construct(
         private HttpClientInterface $httpClient,
         #[Autowire(param: 'cdp.api_key')] private string $apiKey
-    ) {}
+    ) {
+    }
 
     /**
      * Method track

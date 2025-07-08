@@ -11,9 +11,13 @@ class HandlerDelegator
 {
     // Autowires an iterator of services based on a tag name
 
+    /**
+     * @param iterable<WebhookHandlerInterface> $handlers
+     */
     public function __construct(
         #[AutowireIterator('webhook.handler')] private iterable $handlers
-    ) {}
+    ) {
+    }
 
     public function delegate(Webhook $webhook): void
     {
