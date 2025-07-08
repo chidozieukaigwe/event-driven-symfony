@@ -11,7 +11,7 @@ class NewsletterHandler implements WebhookHandlerInterface
     private const array SUPPORTED_EVENTS = [
         'newsletter_opened',
         'newsletter_subscribed',
-        'newsletter_unsubscribed',
+        'newsletter_unsubscribed'
     ];
 
     public function supports(Webhook $webhook): bool
