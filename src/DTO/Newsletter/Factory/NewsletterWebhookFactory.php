@@ -12,7 +12,9 @@ use Throwable;
 
 class NewsletterWebhookFactory
 {
-    public function __construct(private SerializerInterface $serializer) {}
+    public function __construct(private SerializerInterface $serializer)
+    {
+    }
 
     public function create(Webhook $webhook): NewsletterWebhook
     {

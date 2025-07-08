@@ -6,7 +6,6 @@ namespace App\DTO\User;
 
 class User
 {
-
     private string $clientId;
     private string $email;
     private string $region;

@@ -10,7 +10,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 class WebhooksControllerTest extends WebTestCase
 {
-
     private KernelBrowser $webTester;
 
     protected function setUp(): void

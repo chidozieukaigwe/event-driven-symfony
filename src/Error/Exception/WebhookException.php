@@ -2,4 +2,6 @@
 
 namespace App\Error\Exception;
 
-class WebhookException extends \Exception {}
+class WebhookException extends \Exception
+{
+}
