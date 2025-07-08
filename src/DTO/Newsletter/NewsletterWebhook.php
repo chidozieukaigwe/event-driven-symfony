@@ -7,6 +7,7 @@ namespace App\DTO\Newsletter;
 use App\CDP\Analytics\Model\Subscription\SubscriptionSourceInterface;
 use App\DTO\User\User;
 use DateTimeImmutable;
+use App\DTO\Newsletter\Newsletter;
 
 class NewsletterWebhook implements SubscriptionSourceInterface
 {
@@ -75,5 +76,35 @@ class NewsletterWebhook implements SubscriptionSourceInterface
     public function setNewsletter(Newsletter $newsletter): void
     {
         $this->newsletter = $newsletter;
+    }
+
+    public function getProduct(): string
+    {
+        // newsletter.prduct_id
+        return $this->newsletter->getProductId();
+    }
+
+    public function getEventDate(): string
+    {
+        // timestamp
+        return $this->timestamp->format('Y-m-d');
+    }
+
+    public function getSubscriptionId(): string
+    {
+        // id
+        return $this->id;
+    }
+
+    public function getEmail(): string
+    {
+        // user.email
+        return $this->user->getEmail();
+    }
+
+    public function getUserId(): string
+    {
+        // user.client_id
+        return $this->user->getClientId();
     }
 }
