@@ -20,7 +20,7 @@ class CdpClient
     /**
      * Method track
      *
-     * @param ModelInterface $model [explicite description]
+     * @param ModelInterface $model
      *
      * @return void
      */
@@ -37,7 +37,6 @@ class CdpClient
                 'body' => json_encode($model->toArray(), JSON_THROW_ON_ERROR),
             ]
         );
-
         // Add error handling
     }
 
@@ -56,6 +55,5 @@ class CdpClient
         );
 
         // Add error handling
-
     }
 }
