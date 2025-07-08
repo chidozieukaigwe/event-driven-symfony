@@ -68,7 +68,8 @@
         "run-phpstan": "vendor/bin/phpstan analyse",
         "run-phpcs": "vendor/bin/phpcs",
         "run-phplint": "vendor/bin/phplint",
-        "run-phpunit": "vendor/bin/phpunit --testsuite Unit,Application --testdox"
+        "run-phpunit": "vendor/bin/phpunit --testsuite Unit,Application --testdox",
+        "run-phpcbf": "vendor/bin/phpcbf"
     },
     "conflict": {
         "symfony/symfony": "*"
