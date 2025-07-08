@@ -23,7 +23,8 @@ class NewsletterHandler implements WebhookHandlerInterface
     public function __construct(
         private NewsletterWebhookFactory $newsletterWebhookFactory,
         #[AutowireIterator('forwarder.newsletter')] private iterable $forwarders
-    ) {}
+    ) {
+    }
 
     public function supports(Webhook $webhook): bool
     {

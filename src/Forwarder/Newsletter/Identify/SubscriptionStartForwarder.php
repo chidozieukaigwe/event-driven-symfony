@@ -2,6 +2,7 @@
 
 namespace App\Forwarder\Newsletter\Identify;
 
+use App\CDP\Analytics\Model\Subscription\Identify\IdentifyModel;
 use App\DTO\Newsletter\NewsletterWebhook;
 use App\Forwarder\Newsletter\ForwarderInterface;
 
@@ -16,10 +17,19 @@ class SubscriptionStartForwarder implements ForwarderInterface
 
     public function forward(NewsletterWebhook $newsletterWebhook): void
     {
-        // Identify the user and send a welcome email
-        $user = $newsletterWebhook->getUser();
-        $newsletter = $newsletterWebhook->getNewsletter();
+        // Instantiate a class which models Identify data
+        $identifyModel = new IdentifyModel();
 
-        // Implement the email sending logic here
+        dd($identifyModel);
+
+        //  Populate the Identify model with the relevant data from the NewsletterWebhook
+
+        //  Use the CDP client to POST the data to the CDP
+
+        //  Map the NewsletterWebhook data to the model
+
+        //  Validate the model
+
+        //  Use the CDP client to POST the data to the CDP
     }
 }
