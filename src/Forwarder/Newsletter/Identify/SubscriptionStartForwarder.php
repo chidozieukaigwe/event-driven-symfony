@@ -16,8 +16,7 @@ class SubscriptionStartForwarder implements ForwarderInterface
 
     public function __construct(
         private CdpClientInterface $cdpClient
-    ) {
-    }
+    ) {}
 
     public function supports(NewsletterWebhook $newsletterWebhook): bool
     {
@@ -35,6 +34,8 @@ class SubscriptionStartForwarder implements ForwarderInterface
         //  Validate the model
 
         //  Use the CDP client to POST the data to the CDP
+
+        dd($this->cdpClient);
 
         $this->cdpClient->identify($identifyModel);
     }
