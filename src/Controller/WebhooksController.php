@@ -23,7 +23,8 @@ class WebhooksController extends AbstractController
         private SerializerInterface $serializer,
         private HandlerDelegator $handlerDelegator,
         private ErrorHandlerInterface $errorHandler
-    ) {}
+    ) {
+    }
     /**
      * Method healthcheck
      *
