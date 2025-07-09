@@ -11,8 +11,9 @@ use App\Forwarder\Newsletter\ForwarderInterface;
 
 class SubscriptionForwarder implements ForwarderInterface
 {
-
-    public function __construct(private CdpClientInterface $cdpClient, private ModelValidator $validator) {}
+    public function __construct(private CdpClientInterface $cdpClient, private ModelValidator $validator)
+    {
+    }
 
     public function supports(NewsletterWebhook $newsletterWebhook): bool
     {

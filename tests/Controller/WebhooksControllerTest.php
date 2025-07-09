@@ -88,8 +88,6 @@ class WebhooksControllerTest extends WebTestCase
                 'properties' => [
                     'requires_consent' => true,
                     'platform' => 'web',
-                    // 'currency' => null,
-                    // 'in_trial' => false,
                     'product_name' => 'newsletter-001',
                     'renewal_date' => '2025-12-12',
                     'start_date' => '2024-12-12',
