@@ -7,7 +7,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 class TrackModel implements ModelInterface
 {
-
     #[Assert\NotBlank]
     private string $event;
 
@@ -54,9 +53,6 @@ class TrackModel implements ModelInterface
 
     #[Assert\NotBlank]
     private string $status;
-
-    #[Assert\NotBlank]
-    private string $newsletter;
 
     #[Assert\NotBlank]
     private bool $isPromotion = false;
@@ -121,11 +117,6 @@ class TrackModel implements ModelInterface
         return $this->status;
     }
 
-    public function getNewsletter(): string
-    {
-        return $this->newsletter;
-    }
-
     public function getId(): string
     {
         return $this->id;
@@ -181,11 +172,6 @@ class TrackModel implements ModelInterface
         $this->status = $status;
     }
 
-    public function setNewsletter(string $newsletter): void
-    {
-        $this->newsletter = $newsletter;
-    }
-
     public function setId(string $id): void
     {
         $this->id = $id;
@@ -209,6 +195,26 @@ class TrackModel implements ModelInterface
     public function setType(string $type): void
     {
         $this->type = $type;
+    }
+
+    public function getCurrency(): ?string
+    {
+        return $this->currency;
+    }
+
+    public function setCurrency(?string $currency): void
+    {
+        $this->currency = $currency;
+    }
+
+    public function getInTrial(): ?bool
+    {
+        return $this->inTrial;
+    }
+
+    public function setInTrial(?bool $inTrial): void
+    {
+        $this->inTrial = $inTrial;
     }
 
 
