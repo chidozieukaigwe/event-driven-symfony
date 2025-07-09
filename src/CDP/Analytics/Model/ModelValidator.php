@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\CDP\Analytics\Model;
 
 use App\Error\Exception\WebhookException;
