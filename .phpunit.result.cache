@@ -1,1 +1,1 @@
-{"version":1,"defects":{"App\\Tests\\Controller\\WebhooksControllerTest::testWebhooksAreHandled":5},"times":{"App\\Tests\\Controller\\WebhooksControllerTest::testWebhooksAreHandled":0.027}}
+{"version":1,"defects":{"App\\Tests\\Controller\\WebhooksControllerTest::testWebhooksAreHandled":7},"times":{"App\\Tests\\Controller\\WebhooksControllerTest::testWebhooksAreHandled":0.039}}

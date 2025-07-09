@@ -16,7 +16,8 @@ class SubscriptionStartForwarder implements ForwarderInterface
 
     public function __construct(
         private CdpClientInterface $cdpClient
-    ) {}
+    ) {
+    }
 
     public function supports(NewsletterWebhook $newsletterWebhook): bool
     {
