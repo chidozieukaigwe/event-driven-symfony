@@ -6,6 +6,7 @@
 
 parameters:
     cdp.api_key: '%env(CDP_API_KEY)%'
+    cdp.url:    '%env(CDP_URL)%'
 
 services:
     # default configuration for services in *this* file
