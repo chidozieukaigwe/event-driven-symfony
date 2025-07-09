@@ -12,7 +12,8 @@ class ModelValidator
 {
     public function __construct(
         private ValidatorInterface $validator
-    ) {}
+    ) {
+    }
 
     public function validate(ModelInterface $model): void
     {
