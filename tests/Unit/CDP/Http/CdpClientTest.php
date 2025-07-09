@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Tests\Unit\CDP\Http;
 
 use App\CDP\Analytics\Model\ModelInterface;
