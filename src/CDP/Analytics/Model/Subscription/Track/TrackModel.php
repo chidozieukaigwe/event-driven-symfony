@@ -30,9 +30,9 @@ class TrackModel implements ModelInterface
     #[Assert\NotBlank]
     private bool $requiresConsent;
 
-    private ?string $currency;
+    private ?string $currency = null;
 
-    private ?bool $inTrial;
+    private ?bool $inTrial = null;
 
     #[Assert\NotBlank]
     private string $productName;
@@ -54,7 +54,6 @@ class TrackModel implements ModelInterface
     #[Assert\NotBlank]
     private string $status;
 
-    #[Assert\NotBlank]
     private bool $isPromotion = false;
 
     #[Assert\NotBlank]
